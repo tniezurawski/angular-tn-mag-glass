@@ -1,0 +1,28 @@
+{
+  "name": "angular-tn-mag-glass",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tniezurawski/angular-tn-mag-glass",
+  "authors": [
+    "Tomasz Nieżurawski <tommaqs@gmail.com>"
+  ],
+  "description": "AngularJS directive for magic / magnifying glass",
+  "main": "tnmagglass.js",
+  "keywords": [
+    "angularjs",
+    "directive",
+    "magnifying",
+    "glass"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "source/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.2.23"
+  }
+}
