@@ -9,10 +9,72 @@
             width: 960px;
             margin: 10px auto 0 auto;
         }
+
+        .example {
+            margin: 0 auto;
+        }
+
+        .example1 {
+            width: 509px;
+            height: 537px;
+        }
+
+        .example2 {
+            width: 480px;
+            height: 607px;
+        }
+
+        .example3 {
+            width: 447px;
+            height: 462px;
+        }
     </style>
+    <link rel="stylesheet" href="styles/tn-mag-glass.css"/>
 </head>
 <body ng-app="app">
-    <tn-mag-glass></tn-mag-glass>
+    <h1>Magnifying glass</h1>
+    <p>Look what it can do.</p>
+    <div>
+        <h2>Example 1</h2>
+        <p>Look inside objects</p>
+        <div class="example example1">
+            <tn-mag-glass
+                    inside-src="sensor_inside.png"
+                    outside-src="sensor_outside.png"
+                    obj-width="509"
+                    obj-height="537"
+                    >
+            </tn-mag-glass>
+        </div>
+    </div>
+
+    <div>
+        <h2>Example 2</h2>
+        <p>Look at effects applied on photos through mag glass</p>
+        <div class="example example2">
+            <tn-mag-glass
+                    inside-src="ww2_marine_after.jpg"
+                    outside-src="ww2_marine_before.jpg"
+                    obj-width="480"
+                    obj-height="607"
+                    >
+            </tn-mag-glass>
+        </div>
+    </div>
+
+    <div>
+        <h2>Example 3</h2>
+        <p>You can make instant retouch if you wish</p>
+        <div class="example example3">
+            <tn-mag-glass
+                    inside-src="retouch_after.jpg"
+                    outside-src="retouch_before.jpg"
+                    obj-width="447"
+                    obj-height="462"
+                    >
+            </tn-mag-glass>
+        </div>
+    </div>
 
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="app.js"></script>

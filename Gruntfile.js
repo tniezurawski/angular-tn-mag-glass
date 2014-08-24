@@ -19,11 +19,17 @@ module.exports = function(grunt) {
             options: {
                 livereload: true
             },
-            files: [
-                '<%= jshint.files %>',
-                'source/index.html'
-            ],
-            tasks: ['jshint']
+            js: {
+                files: ['<%= jshint.files %>'],
+                tasks: ['jshint']
+            },
+            html: {
+                files: ['source/**/*.html']
+            },
+            scss: {
+                files: ['source/scss/*.scss'],
+                tasks: ['sass']
+            }
         },
         jshint: {
             files: [
@@ -35,7 +41,15 @@ module.exports = function(grunt) {
                 globalstrict: true,
                 globals: {
                     "angular": true,
-                    "module": true
+                    "module": true,
+                    "console": true
+                }
+            }
+        },
+        sass: {
+            dist: {
+                files: {
+                    'source/styles/tn-mag-glass.css': 'source/scss/tn-mag-glass.scss'
                 }
             }
         }
@@ -44,6 +58,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-sass');
 
     grunt.registerTask('serve', ['jshint', 'connect:server', 'watch']);
 
